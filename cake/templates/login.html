@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="login">
+    <h3>Login Page</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+                <input type="text" name="username" placeholder="username" required style="margin:2%";>
+                <br>
+                <input type="text" name="password" placeholder="password" required style="margin-bottom:2%;">
+                <br>
+                <button type="submit">login</button>
+                <p style="margin:2%;">Don't have an account? <a href="{% url 'cake_shop:register' %}">Register here</a></p>
+        </form>
+</div>
+
+{% endblock %}
